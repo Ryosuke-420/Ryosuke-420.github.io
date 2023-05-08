@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
 *{
   font-family: 'Poppins', sans-serif;
@@ -99,6 +99,7 @@ section {
   margin-top: 30px;
   padding: 30px;
   transition: all .3s ease-in;
+  border-radius: 20px;
 }
 .article:hover {
   scale: 1.1;
