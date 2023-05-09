@@ -186,6 +186,8 @@ section {
 }
 .footer{
   background-color: white;
+  position: relative;
+  right: 0px; bottom: 0px;
 }
 .dropdown-item:hover{
   background-color: var(--primary-color);
