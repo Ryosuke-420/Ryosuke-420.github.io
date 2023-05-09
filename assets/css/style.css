@@ -2,13 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
 *{
   font-family: 'Poppins', sans-serif;
-  
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-
 .navbar{
   height:var(--primary-hight);
 }
@@ -16,7 +14,6 @@ a {
   padding: 28px;
 
 }
-
 .navbar .level-nav-link.nav-link {
     padding-right: var(--primary-padding);
     padding-left: var(--primary-padding);
@@ -36,9 +33,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-  
-
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -49,12 +43,6 @@ a {
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-.login_info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 .form-group {
   position: relative;
@@ -71,13 +59,6 @@ a {
 }
 .form-group input {
   padding-left: 40px;
-}
-.forgot-acc {
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
 }
 .footer {
 
@@ -132,10 +113,11 @@ section {
   background-color: white;
 }
 .level-slider {
-  background-color: #f3f3f3;
+  background-color: white;
 }
 .level-slider img {
-  width: 100%;
+  max-width: 740px;
+  max-height: 480px;
 }
 .level-slider-item-container {
   padding: var(--primary-padding);
@@ -146,7 +128,7 @@ section {
 }
 .level-slider p {
   font-size: var(--text-font-size);
-  color: var(--color-text);
+  color: black;
 }
 .hero{
   font-weight:bold;
@@ -202,12 +184,12 @@ section {
   margin-right: 20px
 }
 .p-header{
-  margin-left: 30px;
-  margin-top: 10px
+  margin-top: 20px;
+  text-align: center;
 }
 .p-txt{
-  margin-right: 20px;
   margin-left: 20px;
+  text-align: center;
 }
 .page-logo:hover {
   animation: spin 3s linear infinite;
@@ -220,4 +202,7 @@ section {
   to {
     transform: rotate(360deg);
   }
+}
+.level-slider .btn{
+  margin-bottom: 10px;
 }
