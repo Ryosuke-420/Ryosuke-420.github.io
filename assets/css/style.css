@@ -206,3 +206,36 @@ section {
 .level-slider .btn{
   margin-bottom: 10px;
 }
+.news-h{
+  font-size: 60px;
+
+  position: relative;
+  text-align: center;
+}
+.news-h:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.75s ease-out;
+}
+
+.news-h:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.card{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.card-title{
+  text-align: center;
+}
+.card-text{
+  text-align: center;
+}
