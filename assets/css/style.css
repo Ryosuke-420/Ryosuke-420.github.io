@@ -25,14 +25,32 @@ a {
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
+    border-radius: 20px;
 }
 .hero {
-    background: url(/assets/img/main_bg.jpg) no-repeat center center cover;
-    height: 515px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 515px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+  
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .login_info {
     display: flex;
     flex-direction: column;
@@ -111,7 +129,7 @@ section {
   margin-bottom: 10px;
 }
 .section-gray {
-  background-color: #f3f3f3;
+  background-color: white;
 }
 .level-slider {
   background-color: #f3f3f3;
@@ -135,6 +153,7 @@ section {
 }
 .dropdown-menu{
   background-color: #f3f3f3;
+  border: none;
 }
 .links{
   font-size: 25px;  
@@ -166,5 +185,37 @@ section {
   background-color: #f3f3f3;
 }
 .footer{
-  background-color: #f3f3f3;
+  background-color: white;
+}
+.dropdown-item:hover{
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.dropdown-menu{
+  border-radius: 20px;
+}
+.level-slider-item{
+  margin-right: 20px
+}
+.p-header{
+  margin-left: 30px;
+  margin-top: 10px
+}
+.p-txt{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.page-logo:hover {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
