@@ -232,6 +232,7 @@ section {
 .card{
   margin-top: 10px;
   margin-left: 10px;
+  
 }
 .card-title{
   text-align: center;
@@ -256,7 +257,6 @@ section {
 }
 
 .p-svt:hover{
-
   scale: 1.1;
   box-shadow: 0 0 7px 0 #f3f3f3;
   border-radius: 20px;
