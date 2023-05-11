@@ -233,7 +233,6 @@ section {
 }
 .card{
   margin-top: 30px;
-  margin-left: 40%;
   transition: all .3s ease-in;
   border-radius: 20px;
 }
