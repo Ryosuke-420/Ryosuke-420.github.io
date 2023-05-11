@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
 *{
   font-family: 'Poppins', sans-serif;
 }
@@ -12,7 +11,8 @@ a {
 }
 .navbar .level-nav-link.nav-link {
   padding: 28px;
-
+  background-color: #f3f3f3;
+ 
 }
 .navbar .level-nav-link.nav-link {
     padding-right: var(--primary-padding);
@@ -20,7 +20,7 @@ a {
 }
 .navbar .level-nav-link.nav-link:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: #f3f3f3;
     cursor: pointer;
     border-radius: 20px;
 }
@@ -44,22 +44,6 @@ a {
 		background-position: 0% 50%;
 	}
 }
-.form-group {
-  position: relative;
-  cursor: pointer;
-}
-.form-group i {
-  color: var(--primary-color);
-  font-size: var(--text-font-title);
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.form-group input {
-  padding-left: 40px;
-}
 .footer {
 
   padding: 0px;
@@ -78,6 +62,24 @@ section {
 }
 .section-subtitle {
   font-size: 50px;
+  display: inline-block;
+  position: relative;
+}
+.section-subtitle:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.section-subtitle:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .section-subtitle2 {
   font-size: 30px;
