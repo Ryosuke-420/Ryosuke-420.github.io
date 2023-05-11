@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
 *{
   font-family: 'Poppins', sans-serif;
 }
@@ -12,7 +11,7 @@ a {
 }
 .navbar .level-nav-link.nav-link {
   padding: 28px;
-
+  background-color: #f3f3f3;
 }
 .navbar .level-nav-link.nav-link {
     padding-right: var(--primary-padding);
@@ -20,7 +19,7 @@ a {
 }
 .navbar .level-nav-link.nav-link:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: #f3f3f3;
     cursor: pointer;
     border-radius: 20px;
 }
@@ -260,4 +259,7 @@ section {
   scale: 1.1;
   box-shadow: 0 0 7px 0 #f3f3f3;
   border-radius: 20px;
+}
+.blank{
+  height: 70px;
 }

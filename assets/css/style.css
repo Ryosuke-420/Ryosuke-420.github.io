@@ -233,9 +233,8 @@ section {
 }
 .card{
   margin-top: 10px;
-  margin-left: 30px;
-  justify-content: center;
-  text-align: center;
+  margin-left: 40%;
+
 }
 .card-title{
   text-align: center;
