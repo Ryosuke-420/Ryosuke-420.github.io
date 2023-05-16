@@ -175,10 +175,12 @@ section {
   color: white;
   cursor: pointer;
   border-radius: 20px;
+
 }
 .dropdown-menu{
   border-radius: 20px;
-}
+
+} 
 .level-slider-item{
   margin-right: 20px
 }
@@ -262,4 +264,7 @@ section {
 }
 .blank{
   height: 70px;
+}
+.navbar-custom{
+  background-color: #f3f3f3;
 }

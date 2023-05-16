@@ -45,7 +45,7 @@ a {
 	}
 }
 .footer {
-
+  text-decoration: underline  ;
   padding: 0px;
   text-align:end ;
 }
@@ -100,11 +100,11 @@ section {
   text-align: center;
   margin-top: 30px;
   padding: 30px;
-  transition: all .3s ease-in;
+  transition: all .2s ease-in;
   border-radius: 20px;
 }
 .article:hover {
-  scale: 1.1;
+  scale: 0.9;
   box-shadow: 0 0 7px 0 var(--primary-color);
   border-radius: 20px;
 }
@@ -140,33 +140,12 @@ section {
   background-color: #f3f3f3;
   border: none;
 }
-.priv-link{
-  display: inline-block;
-  position: relative;
-  color: #000000;
-  font-size: 25px;
-
-}
-.priv-link:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000000;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
 .links {
   display: inline-block;
   position: relative;
   color: #0087ca;
   font-size: 25px;
 }
-
 .links:after {
   content: '';
   position: absolute;
@@ -179,7 +158,6 @@ section {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
 .links:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -188,7 +166,6 @@ section {
   background-color: #f3f3f3;
 }
 .footer{
-
   position: relative;
   right: 0px; bottom: 0px;
 }
@@ -215,7 +192,6 @@ section {
 .page-logo:hover {
   animation: spin 3s linear infinite;
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -269,4 +245,10 @@ section {
 }
 .card-text{
   text-align: center;
+}
+.p-img{
+  border-radius: 20px;
+}
+.navbar-custom{
+  background-color: #f3f3f3;
 }
