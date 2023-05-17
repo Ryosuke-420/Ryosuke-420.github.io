@@ -191,6 +191,7 @@ section {
 }
 .page-logo:hover {
   animation: spin 3s linear infinite;
+  cursor: pointer;
 }
 @keyframes spin {
   from {
@@ -226,10 +227,13 @@ section {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .card{
+  width: 18rem;
   margin-top: 30px;
   transition: all .3s ease-in;
   border-radius: 20px;
+  
 }
 .card-img-top{
   border-top-left-radius: 20px;
@@ -251,4 +255,27 @@ section {
 }
 .navbar-custom{
   background-color: #f3f3f3;
+}
+.git-h{
+  display: inline-block;
+  font-size: 60px;
+  position: relative;
+  text-align: left;
+}
+.git-h:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.75s ease-out;
+}
+
+.git-h:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
