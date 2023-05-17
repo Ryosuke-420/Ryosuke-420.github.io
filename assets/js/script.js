@@ -118,3 +118,16 @@ timeElement.addEventListener("mouseout", function() {
   timeElement.classList.remove("time-hover");
   timeElement.style.transform = "translate(-50%, -50%)";
 });
+
+var shareButton = document.querySelector('.share-button');
+var message = document.querySelector('.message');
+
+shareButton.addEventListener('mouseover', function() {
+  message.style.opacity = '1';
+  message.style.transform = 'translate(-50%, -120%)';
+});
+
+shareButton.addEventListener('mouseout', function() {
+  message.style.opacity = '0';
+  message.style.transform = 'translate(-50%, -100%)';
+});
