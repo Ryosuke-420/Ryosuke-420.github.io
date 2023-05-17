@@ -125,3 +125,24 @@ shareButton.addEventListener('mouseout', function() {
   message.style.opacity = '0';
   message.style.transform = 'translate(-50%, -100%)';
 });
+
+if (!localStorage.getItem('alertShown')) {
+ 
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    alert("ce site n'est pas vraiment optimisé pour la navigation sur téléphone. nous faisons de notre mieux.");
+  } else {
+
+  }
+  localStorage.setItem('alertShown', true);
+}
+
+function copyText(element) {
+  var text = element.innerText || element.textContent;
+  var tempInput = document.createElement('input');
+  tempInput.setAttribute('value', text);
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+  alert('Wallet link copied :  ' + text);
+}

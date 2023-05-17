@@ -249,6 +249,14 @@ section {
 }
 .p-img{
   border-radius: 20px;
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+.p-img:hover{
+  scale: 0.9;
+  box-shadow: 0 0 7px 0 var(--primary-color);
+  border-radius: 30px;
+
 }
 .navbar-custom{
   background-color: #f3f3f3;
@@ -344,4 +352,18 @@ word-break: break-word !important;
 }
 .h5-g{
   margin-left: 50px;
+}
+.Note-index{
+  text-align: center;
+  margin-top: 50px;
+}
+.btc{
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+.btc-link{
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
 }
