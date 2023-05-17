@@ -12,7 +12,7 @@ a {
 .navbar .level-nav-link.nav-link {
   padding: 28px;
   background-color: #f3f3f3;
- 
+
 }
 .navbar .level-nav-link.nav-link {
     padding-right: var(--primary-padding);
@@ -49,7 +49,6 @@ a {
   padding: 0px;
   text-align:end ;
 }
-
 section {
   padding: 50px;
   position: relative;
@@ -206,7 +205,6 @@ section {
 }
 .news-h{
   font-size: 60px;
-
   position: relative;
   text-align: center;
 }
@@ -222,18 +220,16 @@ section {
   transform-origin: bottom right;
   transition: transform 0.75s ease-out;
 }
-
 .news-h:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 .card{
   width: 18rem;
   margin-top: 30px;
   transition: all .3s ease-in;
   border-radius: 20px;
-  
+
 }
 .card-img-top{
   border-top-left-radius: 20px;
@@ -274,8 +270,20 @@ section {
   transform-origin: bottom right;
   transition: transform 0.75s ease-out;
 }
-
 .git-h:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+#time {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+.time-hover {
+  font-size: 32px;
+  background-color: #d1d1d1;
 }
