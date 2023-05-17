@@ -255,16 +255,16 @@ section {
 }
 .git-h{
   display: inline-block;
-  font-size: 60px;
   position: relative;
   text-align: left;
+  margin-left: 20px;
 }
 .git-h:after {
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 4px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background-color: black;
@@ -338,4 +338,10 @@ word-break: break-word !important;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+.h3-g{
+  margin-left: 30px;
+}
+.h5-g{
+  margin-left: 50px;
 }
