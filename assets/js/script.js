@@ -62,69 +62,27 @@ function topFunction() {
   document.body.scrollTop = 0; 
 }
 
-function formatTime(date) {
-  var hours = ("0" + date.getHours()).slice(-2);
-  var minutes = ("0" + date.getMinutes()).slice(-2);
-  return hours + ":" + minutes;
+function updateTime() {
+  var timeDiv = document.getElementById("time");
+  var currentDate = new Date();
+
+  if (timeDiv.getAttribute("data-display") === "date") {
+    var formattedDate = currentDate.getFullYear() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getDate();
+    timeDiv.textContent = formattedDate;
+    timeDiv.setAttribute("data-display", "time");
+  } else {
+    var hours = currentDate.getHours().toString().padStart(2, "0");
+    var minutes = currentDate.getMinutes().toString().padStart(2, "0");
+    var formattedTime = hours + ":" + minutes;
+    timeDiv.textContent = formattedTime;
+    timeDiv.setAttribute("data-display", "date");
+  }
 }
 
-var currentDate = new Date();
-var year = currentDate.getFullYear();
-var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
-var day = ("0" + currentDate.getDate()).slice(-2);
-var formattedDate = year + "/" + month + "/" + day;
-document.getElementById("time").textContent = formattedDate;
-
-
-var timeElement = document.getElementById("time");
-timeElement.addEventListener("mouseover", function() {
-
-  var currentTime = new Date();
-  var formattedTime = formatTime(currentTime);
-
-  timeElement.textContent = formattedTime;
-  timeElement.classList.add("time-hover");
-  var duration = 3000; 
-  var startTime = Date.now();
-  var startX = event.clientX;
-  var startY = event.clientY;
-
-  function updatePosition() {
-    var currentTime = Date.now();
-    var elapsedTime = currentTime - startTime;
-
-    if (elapsedTime < duration) {
-      var deltaX = event.clientX - startX;
-      var deltaY = event.clientY - startY;
-      var translateX = Math.round(deltaX / duration * elapsedTime);
-      var translateY = Math.round(deltaY / duration * elapsedTime);
-
-      timeElement.style.transform = "translate(-50%, -50%) translate(" + translateX + "px, " + translateY + "px)";
-      requestAnimationFrame(updatePosition);
-    }
-  }
-
-  updatePosition();
-});
-
-timeElement.addEventListener("mouseout", function() {
-  timeElement.textContent = formattedDate;
-  timeElement.classList.remove("time-hover");
-  timeElement.style.transform = "translate(-50%, -50%)";
-});
-
-var shareButton = document.querySelector('.share-button');
-var message = document.querySelector('.message');
-
-shareButton.addEventListener('mouseover', function() {
-  message.style.opacity = '1';
-  message.style.transform = 'translate(-50%, -120%)';
-});
-
-shareButton.addEventListener('mouseout', function() {
-  message.style.opacity = '0';
-  message.style.transform = 'translate(-50%, -100%)';
-});
+window.onload = function() {
+  updateTime();
+  setInterval(updateTime, 5000);
+};
 
 if (!localStorage.getItem('alertShown')) {
  
@@ -136,13 +94,3 @@ if (!localStorage.getItem('alertShown')) {
   localStorage.setItem('alertShown', true);
 }
 
-function copyText(element) {
-  var text = element.innerText || element.textContent;
-  var tempInput = document.createElement('input');
-  tempInput.setAttribute('value', text);
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempInput);
-  alert('Wallet link copied :  ' + text);
-}
