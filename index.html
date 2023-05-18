@@ -19,12 +19,14 @@
       <title>Page d'accueil - Lycée Regueb</title>
    </head>
    <body>
-      <nav id="navbar_top" class="navbar navbar-expand-md navbar-custom">
+      <nav id="navbar_top" class="z-3 navbar navbar-expand-md navbar-custom">
          <div class="container">
             <a class="navbar-brand">
             <img class="page-logo" src="./assets/img/logo.png" alt="" srcset="" onclick="countClicks()">
             </a>
-            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -56,15 +58,14 @@
                   <div id="time" data-display="date"></div>
                 </li>
             </ul>
-            <span id="time"> </span>
+
+            <div class="blank-space"></div>
         </div>
             </div>
 
            </div>
          </div>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+         
       </nav>
       <div class="hero">
          <svg viewbox="0 0 100 20">

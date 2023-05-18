@@ -251,6 +251,13 @@ section {
   border-radius: 20px;
   transition: all .2s ease-in;
   cursor: pointer;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .p-img {
+    border-radius: 0; 
+    transform: none;
+  }
 }
 .p-img:hover{
   scale: 0.9;
@@ -512,4 +519,12 @@ word-break: break-word !important;
 .maps{
   cursor: pointer;
   text-decoration: underline;
+}
+.blank-space{
+  height: 50px;
+}
+@media(max-width:700px){
+  #time{
+    display:none;
+  }
 }
