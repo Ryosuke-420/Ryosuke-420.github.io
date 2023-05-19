@@ -1,6 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
+@font-face {
+  font-family:'.ArabicUIText';
+  src: url('/assets/font/Arabic-Regular.ttf') format('truetype'),
+       url(https://github.com/Ryosuke-420/Arabic-iOS-Font/blob/main/system/fonts/NotoNaskhArabic-Regular.ttf) format('truetype'),
+}
 *{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins',sans-serif;
+}
+[lang="ar"] {
+  font-family: '.ArabicUIText', sans-serif;
 }
 a {
   color: inherit;
@@ -523,8 +531,14 @@ word-break: break-word !important;
 .blank-space{
   height: 50px;
 }
-@media(max-width:700px){
+@media(max-width:760px){
   #time{
     display:none;
   }
+  .navbar-toggler{
+    margin-left: 70%;
+  }
+}
+.translate{
+  display: none;
 }
